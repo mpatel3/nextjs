@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Footer from '../components/footer'
-import Navbar from '../components/navbar'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Footer from '../components/footer';
+import Navbar from '../components/navbar';
+import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,6 +16,6 @@ export default function Home() {
       <Link href="/ninjas">
         <a className={styles.btn}>See Ninja Listings</a>
       </Link>
-    </div>
+    </>
   )
 }
