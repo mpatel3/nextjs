@@ -1,5 +1,5 @@
 // route for this page comoponent will be ninja
-import styles from '../../styles/Ninja.module.css'
+import styles from '../../styles/user.module.css'
 
 // this function runs at build time, when App is build and compoents gets rendered.
 // function won't be execute in the Browser.
