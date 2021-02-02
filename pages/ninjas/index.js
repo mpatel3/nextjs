@@ -1,8 +1,9 @@
-// route for this page comoponent will be subfolder/test
+// route for this page comoponent will be ninja
 import styles from '../../styles/Ninja.module.css'
 
-// this function runs at build time , app is build and compoents get rendered.
-// function won't be execute in the brower.
+// this function runs at build time, when App is build and compoents gets rendered.
+// function won't be execute in the Browser.
+
 export const getStaticProps = async () => {
    const results =  await fetch('https://jsonplaceholder.typicode.com/users');
    const usersData = await results.json();
