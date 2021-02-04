@@ -1,5 +1,6 @@
 // route for this page comoponent will be ninja
-import styles from '../../styles/user.module.css'
+import styles from '../../styles/user.module.css';
+import Link from 'next/link';
 
 // this function runs at build time, when App is build and compoents gets rendered.
 // function won't be execute in the Browser.
@@ -19,11 +20,11 @@ const Test = ({users}) => {
     return ( <div>
                 <h1>All Users</h1>
                 {users.map(({name, id}) => (
-                    <div key={id}>
+                    <Link href={`/ninjas/${id}`} key={id}>
                         <a className={styles.single}>
                             <h3>{name}</h3>
                         </a>
-                    </div>
+                    </Link>
                 ))}
             </div>
         );
