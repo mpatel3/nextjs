@@ -21,9 +21,19 @@ export const getStaticPaths =  async () => {
     }
 }
 
-const Details = () => {
+// Use getStaticProps to get route paramter and fetch build data.
+export const getStaticProps = async ({params : {id}}) => {
+
+    const result = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const user = await result.json();
+
+    return { props: {user} }
+}
+
+const Details = ({user : {name}}) => {
     return ( <div>
-                Hello
+                <h2>Name</h2>
+                <h3 style={{fontWeight:'normal'}}>{name}</h3>
             </div> 
             );
 }
